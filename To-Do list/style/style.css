@@ -1,0 +1,35 @@
+body{
+    font-family: Arial;
+}
+.title{
+    font-weight: bolder;
+}
+.input{
+
+    width: 300px;
+    height: 20px;
+}
+.button1{
+
+    margin-left: 10px;
+    width: 60px;
+    height: 25px;
+    font-weight: bolder;
+    border-color: aquamarine;
+    border-radius: 50px;
+    background-color: aquamarine;
+    cursor: pointer;
+
+}
+.task{
+
+    font-weight: bold;
+}
+.button2{
+    margin-left: 1%;
+    font-weight: bolder;
+    border-radius: 20px;
+    background-color: aqua;
+    border-color: aqua;
+    cursor: pointer;
+}
