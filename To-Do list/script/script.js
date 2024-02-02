@@ -5,15 +5,22 @@ display();
 function display(){
     let todoHTML = '';
     for(let i = 0; i<todo.length; i++){
-        let todos = todo[i];
-        let html = `<p class="js-td${i} task">${todos} <button class="button2" onclick="del(${i});" >del</button></P>`
+        let todosObject = todo[i];
+        let name = todosObject.name;
+        let dueDate = todosObject.dueDate;
+        let html = `<p class="js-td${i} task">${name} ${dueDate} <button class="button2" onclick="del(${i});" >Done</button></P>`
         todoHTML += html;
     }
     document.querySelector('.js-disp').innerHTML = todoHTML;
 }
 
 function addtodo() {
-    todo.push(document.querySelector('.js-input').value);
+    let task = document.querySelector('.js-input').value
+    let date = document.querySelector('.js-date').value
+    todo.push({
+        name: task,
+        dueDate: date
+    });
     console.log(todo);
     display()
     document.querySelector('.js-input').value = '';
